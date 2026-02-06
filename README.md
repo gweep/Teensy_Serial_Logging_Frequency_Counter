@@ -44,5 +44,14 @@ No schematic is included as the input to the Teensy is very simple.  Input ch0 t
 - [Teensy 4.0](https://www.pjrc.com/store/teensy40.html)
 - [FreqCountMany.ino](https://github.com/PaulStoffregen/FreqCountMany/tree/main)
 - [CoolTerm](https://freeware.the-meiers.org)
-  
+
+
+## Images
+
+![Breadboard](https://github.com/gweep/Teensy_Serial_Logging_Frequency_Counter/blob/main/images/IMG_5861%20small.jpeg)
+
+![basic data](https://github.com/gweep/Teensy_Serial_Logging_Frequency_Counter/blob/main/images/basic_data.jpg)
+
+![Spreadsheet Plot](https://github.com/gweep/Teensy_Serial_Logging_Frequency_Counter/blob/main/images/spreadsheet_plot.jpg)
+
 
