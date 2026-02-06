@@ -43,4 +43,6 @@ No schematic is included as the input to the Teensy is very simple.  Input ch0 t
 - [PJRC.com](https://www.pjrc.com/store/)
 - [Teensy 4.0](https://www.pjrc.com/store/teensy40.html)
 - [FreqCountMany.ino](https://github.com/PaulStoffregen/FreqCountMany/tree/main)
+- [CoolTerm](https://freeware.the-meiers.org)
+  
 
