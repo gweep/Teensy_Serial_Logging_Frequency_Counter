@@ -52,6 +52,8 @@ No schematic is included as the input to the Teensy is very simple.  Input ch0 t
 
 ![basic data](https://github.com/gweep/Teensy_Serial_Logging_Frequency_Counter/blob/main/images/basic_data.jpg)
 
+![basic data](https://github.com/gweep/Teensy_Serial_Logging_Frequency_Counter/blob/main/images/basic_data.jpg)
+
 ![Spreadsheet Plot](https://github.com/gweep/Teensy_Serial_Logging_Frequency_Counter/blob/main/images/spreadsheet_plot.jpg)
 
 
