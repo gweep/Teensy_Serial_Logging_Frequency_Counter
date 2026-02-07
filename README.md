@@ -21,7 +21,7 @@ I have been using my NorCal FCC-2 DDS frequency generator as my ch1 10 MHz refer
 
 1.	The reference clock is rock solid and the reported ch1 frequency error and drift are due to be primarily from the Teensy cpu clock.  (This is the assumed to be the most probable reason as we assume that the 10 MHz reference frequency source has a better and more stable oscillator.)
 2.	The Teensy clock is rock solid and the frequency error and drift are due to the reference oscillator.  (Probably not.)
-3.	The minimal long term frequency drift of ch1 is the result of nearly equal and opposte drift rates for the reference clock and the Teensy cpu clock that cancel each other out.  This is safely assumed to be not the case.  
+3.	The minimal long term frequency drift of ch1 is the result of nearly equal and opposite drift rates for the reference clock and the Teensy cpu clock that cancel each other out.  This is safely assumed to be not the case.  
 
 One lesson learned here is that cpu clock on my particular Teensy 4.0 is very stable after a period of warm-up.  Frequency measurement error (again for my Teensy) has been less than 100 Hz after a warm-up period.  The long term drift has been in the single digits.
 
