@@ -1,3 +1,18 @@
+// Two channel data loging 30 MHz frequency counter.  Data logged via serial port.
+// Michael Sciascia - AB2TS  20260206
+//
+// Based on the FreqCountCode.ino for the Teensy 4.0 by Paul Stoffregen at PJRC
+//
+// Designed to read and log a VFO signal for the purposes of determining stability and drift characteristics.
+// The first frequency counter input is for the signal to be measured.
+// The counter expects a stable and calibrated 10 MHz signal delivered to the second counter input channel (ch1).
+// The 10 MHz signal is used to determine the Teensy CPU clock frequency and drift so that the VFO measurment can be error corrected.
+// All data is time stamped and transmitted via the serial port.  There is no frequency display.
+//
+//
+//
+// The orginal code by Paul Stoffregen can measure 10 channels at once.  Pretty cool.
+//
 // Measures 10 frequencies by counting rising edges.  Best for 10kHz to 30 MHz
 // Connect frequencies to pins 6, 9, 10, 11, 12, 13, 14, 15, 18, 19
 
@@ -22,7 +37,7 @@
 
 // Adapted and expanded by Michael Sciascia - Please credit PJRC for their hard work -
 // 20260201 mcs
-#define VERSION "20260205:1330"
+#define VERSION "20260207:1415"
 
 #define GATE_INTERVAL 2000  // microseconds for each gate interval
 #define GATE_ACCUM 500      // number of intervals to accumulate
@@ -32,8 +47,8 @@
 enum printMode_ENUM { BASIC_DATA = 0,
                       REPORT };
 
-// printMode_ENUM printMode = REPORT;
-printMode_ENUM printMode = BASIC_DATA;
+// printMode_ENUM printMode = BASIC_DATA;
+printMode_ENUM printMode = REPORT;
 bool printHeader = true;
 
 // Always and a trailing decimal zero (.0) as is used in a double floating point calculation
@@ -176,7 +191,7 @@ void setup() {
   Serial.println(" MHz");
 
   Serial.println("\nInput channel ch0_raw is for the primary signal to be counted and logged.");
-  Serial.println("Input channel ch1_ref is for a calibrated 10 MHz reference signal which is used to correct any Teensy internal clock drift.");
+  Serial.println("Input channel ch1_ref is for a calibrated 10 MHz reference signal which is used to correct any Teensy cpu frequency error and drift.");
   Serial.println("Output channel f(ch0_cal) == ch0_raw*10^6/ch1_ref");
 
   Serial.println("\nThe elapsed time count is based on the Teensy internal clock and is not corrected for any error.");
